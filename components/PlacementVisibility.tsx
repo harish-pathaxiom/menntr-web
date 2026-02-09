@@ -5,7 +5,7 @@ export default function PlacementVisibility() {
     {
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5 sm:w-6 sm:h-6"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -25,7 +25,7 @@ export default function PlacementVisibility() {
     {
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5 sm:w-6 sm:h-6"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -45,33 +45,33 @@ export default function PlacementVisibility() {
   ];
 
   return (
-    <section className="bg-[#F7F9FC] py-24">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+    <section className="bg-[#F7F9FC] py-12 sm:py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-20 items-center">
           {/* LEFT — Content */}
-          <div className="space-y-10 max-w-xl">
+          <div className="space-y-6 sm:space-y-8 lg:space-y-10 max-w-xl">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
                 From performance to placement visibility
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
                 Bridge the gap between academics and careers. Mentrr
                 automatically calculates placement readiness based on
                 assessment, assignment scores and AI interview performance.
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-5 sm:space-y-6">
               {features.map((feature, index) => (
-                <div key={index} className="flex gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center text-gray-700 shrink-0">
+                <div key={index} className="flex gap-3 sm:gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center text-gray-700 shrink-0 shadow-sm">
                     {feature.icon}
                   </div>
                   <div>
-                    <h3 className="text-base font-semibold text-gray-900 mb-1">
+                    <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
@@ -81,27 +81,28 @@ export default function PlacementVisibility() {
           </div>
 
           {/* RIGHT — Dashboard images */}
-          {/* RIGHT — Dashboard images */}
-          <div className="relative flex justify-center">
-            <div className="relative">
-              {/* Main dashboard (smaller) */}
-              <Image
-                src="/Student_dashboard_1.svg"
-                alt="Placement dashboard"
-                width={440} // ⬅️ reduced
-                height={350}
-                className="rounded-xl"
-                priority
-              />
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-[400px] sm:max-w-[500px] lg:max-w-none">
+              {/* Main dashboard */}
+              <div className="relative">
+                <Image
+                  src="/Student_dashboard_1.svg"
+                  alt="Placement dashboard"
+                  width={440}
+                  height={350}
+                  className="rounded-xl shadow-lg w-full h-auto"
+                  priority
+                />
+              </div>
 
-              {/* Bottom-right overlay card (smaller, same position) */}
-              <div className="absolute bottom-0 -right-12 w-[260px]">
+              {/* Bottom-right overlay card - hidden on mobile, visible on sm+ */}
+              <div className="hidden sm:block absolute -bottom-4 sm:-bottom-6 lg:bottom-0 -right-4 sm:-right-8 lg:-right-12 w-[200px] sm:w-[240px] lg:w-[260px]">
                 <Image
                   src="/Student_info_1.svg"
                   alt="Student profile summary"
-                  width={260} // ⬅️ reduced
+                  width={260}
                   height={180}
-                  className="rounded-lg"
+                  className="rounded-lg shadow-xl"
                 />
               </div>
             </div>

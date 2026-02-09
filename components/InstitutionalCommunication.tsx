@@ -7,7 +7,7 @@ export default function InstitutionalCommunication() {
     {
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5 sm:w-6 sm:h-6"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -26,7 +26,7 @@ export default function InstitutionalCommunication() {
     {
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5 sm:w-6 sm:h-6"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -45,59 +45,61 @@ export default function InstitutionalCommunication() {
   ];
 
   return (
-    <section className="relative bg-gray-50 py-20 overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="relative bg-gray-50 py-12 sm:py-16 lg:py-20 overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center">
           {/* LEFT — Dashboard SVGs */}
-          <div className="relative">
-            {/* Main dashboard background */}
-            <div className="relative">
-              <Image
-                src="/User_admin_screen_4__1_.svg"
-                alt="Admin dashboard"
-                width={600}
-                height={400}
-                className="w-full h-auto"
-                priority
-              />
-            </div>
+          <div className="relative order-2 lg:order-1">
+            <div className="relative max-w-[500px] lg:max-w-full mx-auto">
+              {/* Main dashboard background */}
+              <div className="relative">
+                <Image
+                  src="/User_admin_screen_4__1_.svg"
+                  alt="Admin dashboard"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto rounded-xl lg:rounded-2xl shadow-lg"
+                  priority
+                />
+              </div>
 
-            {/* Overlapping date/time picker modal */}
-            <div className="absolute -bottom-8 -left-8 w-[280px]">
-              <Image
-                src="/Date___Time_picker_1__1_.svg"
-                alt="Schedule announcement"
-                width={280}
-                height={320}
-                className="w-full h-auto rounded-xl"
-              />
+              {/* Overlapping date/time picker modal - hidden on mobile */}
+              <div className="hidden sm:block absolute -bottom-6 sm:-bottom-8 -left-4 sm:-left-8 w-[220px] sm:w-[260px] lg:w-[280px]">
+                <Image
+                  src="/Date___Time_picker_1__1_.svg"
+                  alt="Schedule announcement"
+                  width={280}
+                  height={320}
+                  className="w-full h-auto rounded-xl shadow-xl"
+                />
+              </div>
             </div>
           </div>
 
           {/* RIGHT — Content */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8 order-1 lg:order-2">
             <div>
-              <h2 className="text-[42px] font-bold text-gray-900 mb-5 leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-gray-900 mb-4 sm:mb-5 leading-tight">
                 Centralized institutional communication
               </h2>
-              <p className="text-base text-gray-600 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 Eliminate missed emails and hallway notices. Broadcast official
                 announcements or send targeted messages to specific departments
                 and student groups directly within the platform.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 mt-6 sm:mt-10">
               {features.map((feature, index) => (
                 <div key={index} className="space-y-3">
                   <div className="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center text-gray-700 shadow-sm">
                     {feature.icon}
                   </div>
                   <div>
-                    <h3 className="text-base font-semibold text-gray-900 mb-1.5">
+                    <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1.5">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-600 text-[15px] leading-relaxed">
+                    <p className="text-gray-600 text-sm sm:text-[15px] leading-relaxed">
                       {feature.description}
                     </p>
                   </div>

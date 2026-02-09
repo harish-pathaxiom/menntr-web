@@ -4,26 +4,26 @@ import Image from "next/image";
 
 export default function AutomatedAssessments() {
   return (
-    <section className="bg-gradient-to-br from-gray-50 to-purple-50/30 py-20">
-      <div className="max-w-[1400px] mx-auto px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="bg-gradient-to-br from-gray-50 to-purple-50/30 py-12 sm:py-16 lg:py-20">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* LEFT — Content */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8 order-2 lg:order-1">
             <div>
-              <h2 className="text-[42px] font-bold text-gray-900 mb-5 leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-gray-900 mb-4 sm:mb-5 leading-tight">
                 Automated assessments with controlled re-attempts
               </h2>
-              <p className="text-base text-gray-600 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 Streamline the entire evaluation process. Create complex
                 assignments, define pass criteria, and let the system handle
                 grading and re-attempts automatically.
               </p>
             </div>
 
-            <div className="space-y-5 mt-8">
+            <div className="space-y-4 sm:space-y-5">
               {/* Flexible Creation */}
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center text-gray-700 shrink-0 mt-0.5 shadow-sm">
+              <div className="flex gap-3 sm:gap-4">
+                <div className="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center text-gray-700 shrink-0 shadow-sm">
                   <svg
                     width="20"
                     height="20"
@@ -41,18 +41,18 @@ export default function AutomatedAssessments() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-base font-semibold text-gray-900 mb-1.5">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1.5">
                     Flexible Creation
                   </h3>
-                  <p className="text-gray-600 text-[15px] leading-relaxed">
+                  <p className="text-gray-600 text-sm sm:text-[15px] leading-relaxed">
                     Create MCQ, coding tests, and written assignments easily.
                   </p>
                 </div>
               </div>
 
               {/* Rule-Based Evaluation */}
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center text-gray-700 shrink-0 mt-0.5 shadow-sm">
+              <div className="flex gap-3 sm:gap-4">
+                <div className="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center text-gray-700 shrink-0 shadow-sm">
                   <svg
                     width="20"
                     height="20"
@@ -68,10 +68,10 @@ export default function AutomatedAssessments() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-base font-semibold text-gray-900 mb-1.5">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1.5">
                     Rule-Based Evaluation
                   </h3>
-                  <p className="text-gray-600 text-[15px] leading-relaxed">
+                  <p className="text-gray-600 text-sm sm:text-[15px] leading-relaxed">
                     Set auto-fail criteria and enable conditional re-attempts.
                   </p>
                 </div>
@@ -80,14 +80,14 @@ export default function AutomatedAssessments() {
           </div>
 
           {/* RIGHT — Assessment Dashboard SVG */}
-          <div className="relative flex justify-end items-center">
-            <div className="relative w-full max-w-[600px]">
+          <div className="relative flex justify-center lg:justify-end items-center order-1 lg:order-2">
+            <div className="relative w-full max-w-[500px] lg:max-w-[600px]">
               <Image
                 src="/Assessments_1.svg"
                 alt="Assessment Dashboard"
                 width={600}
                 height={400}
-                className="rounded-2xl shadow-2xl w-full h-auto"
+                className="rounded-xl lg:rounded-2xl shadow-xl lg:shadow-2xl w-full h-auto"
                 priority
               />
             </div>

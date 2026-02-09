@@ -33,27 +33,29 @@ export default function WhyMentrr() {
   ];
 
   return (
-    <section className="bg-[#0a1628] text-white py-16 px-6">
+    <section className="bg-[#0a1628] text-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 px-4">
             Why institutions choose Mentrr
           </h2>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-400 text-base sm:text-lg px-4">
             Designed for the scale and complexity of modern education.
           </p>
         </div>
 
         {/* Feature Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-[#0f1d2f] border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors duration-300"
+              className="bg-[#0f1d2f] border border-gray-800 rounded-lg sm:rounded-xl p-5 sm:p-6 hover:border-gray-700 hover:bg-[#12233a] transition-all duration-300"
             >
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-white">
+                {feature.title}
+              </h3>
+              <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
                 {feature.description}
               </p>
             </div>
