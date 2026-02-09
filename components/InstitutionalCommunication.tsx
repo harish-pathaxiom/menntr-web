@@ -50,29 +50,41 @@ export default function InstitutionalCommunication() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center">
           {/* LEFT — Dashboard SVGs */}
           <div className="relative order-2 lg:order-1">
-            <div className="relative max-w-[500px] lg:max-w-full mx-auto">
-              {/* Main dashboard background */}
+            {/* Desktop view - with overlay */}
+            <div className="hidden lg:block relative max-w-full">
               <div className="relative">
                 <Image
                   src="/User_admin_screen_4__1_.svg"
                   alt="Admin dashboard"
                   width={600}
                   height={400}
-                  className="w-full h-auto rounded-xl lg:rounded-2xl shadow-lg"
+                  className="w-full h-auto rounded-2xl"
                   priority
                 />
               </div>
 
-              {/* Overlapping date/time picker modal - hidden on mobile */}
-              <div className="hidden sm:block absolute -bottom-6 sm:-bottom-8 -left-4 sm:-left-8 w-[220px] sm:w-[260px] lg:w-[280px]">
+              {/* Overlapping date/time picker modal - desktop only */}
+              <div className="absolute -bottom-8 -left-8 w-[280px]">
                 <Image
                   src="/Date___Time_picker_1__1_.svg"
                   alt="Schedule announcement"
                   width={280}
                   height={320}
-                  className="w-full h-auto rounded-xl shadow-xl"
+                  className="w-full h-auto rounded-xl"
                 />
               </div>
+            </div>
+
+            {/* Mobile/Tablet view - single image only */}
+            <div className="lg:hidden relative max-w-[500px] mx-auto">
+              <Image
+                src="/User_admin_screen_4__1_.svg"
+                alt="Admin dashboard"
+                width={600}
+                height={400}
+                className="w-full h-auto rounded-xl shadow-lg"
+                priority
+              />
             </div>
           </div>
 

@@ -9,7 +9,7 @@ export default function DashboardPreview() {
         {/* Desktop Layout - Side by side */}
         <div className="hidden lg:flex">
           {/* Sidebar SVG */}
-          <div className="flex-shrink-0">
+          <div className="flex">
             <Image
               src="/Side_bar.svg"
               alt="Dashboard Sidebar"
@@ -33,31 +33,16 @@ export default function DashboardPreview() {
           </div>
         </div>
 
-        {/* Mobile & Tablet Layout - Stacked */}
+        {/* Mobile & Tablet Layout - Only main dashboard */}
         <div className="lg:hidden">
-          {/* Main Dashboard (shown first on mobile) */}
-          <div className="w-full">
-            <Image
-              src="/Frame_242.svg"
-              alt="Institution Admin Dashboard"
-              width={920}
-              height={600}
-              className="w-full h-auto object-contain"
-              priority
-            />
-          </div>
-
-          {/* Sidebar (shown below on mobile) */}
-          <div className="w-full border-t border-gray-200 sm:hidden">
-            <Image
-              src="/Side_bar.svg"
-              alt="Dashboard Sidebar"
-              width={280}
-              height={600}
-              className="w-full h-auto object-contain"
-              priority
-            />
-          </div>
+          <Image
+            src="/Frame_242.svg"
+            alt="Institution Admin Dashboard"
+            width={920}
+            height={600}
+            className="w-full h-auto object-contain"
+            priority
+          />
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const productLinks = [
@@ -29,9 +30,13 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <div className="mb-4">
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
-                Mentrr
-              </h3>
+              <Image
+                src="/Container.svg"
+                alt="Mentrr"
+                width={140}
+                height={35}
+                className="h-8 w-auto mb-2"
+              />
               <p className="text-xs sm:text-sm text-gray-500 mt-1">
                 Smarter Campus Management for Everyone
               </p>
@@ -110,7 +115,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-8 sm:mt-10 lg:mt-12 pt-6 sm:pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs sm:text-sm text-gray-500 text-center md:text-left">
-            © 2024 Mentrr Inc. All rights reserved.
+            © 2026 Mentrr Inc. All rights reserved.
           </p>
           <div className="flex gap-4 sm:gap-6">
             <Link

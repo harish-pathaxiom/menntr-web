@@ -82,29 +82,41 @@ export default function PlacementVisibility() {
 
           {/* RIGHT — Dashboard images */}
           <div className="relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[400px] sm:max-w-[500px] lg:max-w-none">
-              {/* Main dashboard */}
+            {/* Desktop view - with overlay */}
+            <div className="hidden lg:block relative w-full max-w-none">
               <div className="relative">
                 <Image
                   src="/Student_dashboard_1.svg"
                   alt="Placement dashboard"
                   width={440}
                   height={350}
-                  className="rounded-xl shadow-lg w-full h-auto"
+                  className="rounded-xl w-full h-auto"
                   priority
                 />
               </div>
 
-              {/* Bottom-right overlay card - hidden on mobile, visible on sm+ */}
-              <div className="hidden sm:block absolute -bottom-4 sm:-bottom-6 lg:bottom-0 -right-4 sm:-right-8 lg:-right-12 w-[200px] sm:w-[240px] lg:w-[260px]">
+              {/* Bottom-right overlay card - desktop only */}
+              <div className="absolute -bottom-1 -right-50 w-[500px]">
                 <Image
                   src="/Student_info_1.svg"
                   alt="Student profile summary"
-                  width={260}
-                  height={180}
-                  className="rounded-lg shadow-xl"
+                  width={350}
+                  height={300}
+                  className="rounded-lg"
                 />
               </div>
+            </div>
+
+            {/* Mobile/Tablet view - single image only */}
+            <div className="lg:hidden relative w-full max-w-[500px]">
+              <Image
+                src="/Student_dashboard_1.svg"
+                alt="Placement dashboard"
+                width={440}
+                height={350}
+                className="rounded-xl shadow-lg w-full h-auto"
+                priority
+              />
             </div>
           </div>
         </div>

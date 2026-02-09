@@ -56,7 +56,7 @@ export default function InterviewReadiness() {
                 alt="AI Interview Practice Interface"
                 width={600}
                 height={400}
-                className="w-full h-auto rounded-xl lg:rounded-2xl shadow-lg"
+                className="w-full h-auto rounded-xl lg:rounded-2xl"
                 priority
               />
             </div>

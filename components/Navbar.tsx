@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,12 +13,14 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo Section */}
           <div className="flex items-center gap-2 flex-shrink-0">
-            <div className="text-lg sm:text-xl font-bold text-gray-900">
-              Menntr
-            </div>
-            <div className="hidden sm:block text-xs text-gray-500 max-w-[150px] md:max-w-none">
-              Smarter Campus Management
-            </div>
+            <Image
+              src="/Container.svg"
+              alt="Menntr"
+              width={120}
+              height={30}
+              className="h-7 w-auto sm:h-8"
+              priority
+            />
           </div>
 
           {/* Desktop Navigation */}

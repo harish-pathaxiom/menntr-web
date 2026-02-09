@@ -6,7 +6,7 @@ export default function AutomatedAssessments() {
   return (
     <section className="bg-gradient-to-br from-gray-50 to-purple-50/30 py-12 sm:py-16 lg:py-20">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-8 items-center">
           {/* LEFT — Content */}
           <div className="space-y-6 sm:space-y-8 order-2 lg:order-1">
             <div>
@@ -87,7 +87,7 @@ export default function AutomatedAssessments() {
                 alt="Assessment Dashboard"
                 width={600}
                 height={400}
-                className="rounded-xl lg:rounded-2xl shadow-xl lg:shadow-2xl w-full h-auto"
+                className="rounded-xl lg:rounded-2xl shadow-xl w-full h-auto"
                 priority
               />
             </div>
