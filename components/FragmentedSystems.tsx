@@ -29,7 +29,10 @@ const items = [
 
 export default function FragmentedSystems() {
   return (
-    <section className="relative bg-gradient-to-b from-[#F4F7FF] to-[#EEF2FF] py-12 sm:py-16 lg:py-24">
+    <section
+      className="relative py-12 sm:py-16 lg:py-24"
+      style={{ background: "linear-gradient(90deg, #F2F4F9 0%, #E8EEFF 100%)" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-2xl mb-8 sm:mb-12 lg:mb-14">

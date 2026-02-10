@@ -47,10 +47,10 @@ export default function Navbar() {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <button className="text-sm text-gray-700 hover:text-gray-900 px-4 py-2 transition-colors">
+            <button className="text-sm text-gray-700 bg-[#F2F4F9] px-5 py-2 rounded-full hover:bg-[#E8ECF6] transition-all duration-200">
               Log in
             </button>
-            <button className="bg-purple-600 hover:bg-purple-700 text-white text-sm px-5 py-2 rounded-lg transition-colors shadow-sm">
+            <button className="text-white text-sm px-5 py-2 rounded-full transition-all duration-200 shadow-sm bg-gradient-to-r from-[#904BFF] to-[#C053C2] hover:opacity-90">
               Request Demo
             </button>
           </div>
@@ -95,10 +95,10 @@ export default function Navbar() {
                 RBAC
               </a>
               <div className="flex flex-col gap-3 pt-4 border-t border-gray-200">
-                <button className="text-sm text-gray-700 hover:text-gray-900 py-2 text-left">
+                <button className="text-sm text-black bg-[#F2F4F9] px-5 py-2.5 rounded-full text-center hover:bg-[#E8ECF6] transition-all duration-200">
                   Log in
                 </button>
-                <button className="bg-purple-600 hover:bg-purple-700 text-white text-sm px-5 py-2.5 rounded-lg transition-colors shadow-sm">
+                <button className="text-white text-sm px-5 py-2.5 rounded-full transition-all duration-200 shadow-sm bg-gradient-to-r from-[#904BFF] to-[#C053C2] hover:opacity-90">
                   Request Demo
                 </button>
               </div>

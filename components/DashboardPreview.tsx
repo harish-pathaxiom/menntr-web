@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function DashboardPreview() {
   return (
-    <section className="max-w-[1400px] mx-auto pb-8 sm:pb-12 lg:pb-16 px-4 sm:px-6 lg:px-8">
+    <section className="max-w-[1400px] mx-auto pt-8 pb-8 sm:pb-12 lg:pb-16 px-4 sm:px-6 lg:px-8">
       <div className="bg-white rounded-xl lg:rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
         {/* Desktop Layout - Side by side */}
         <div className="hidden lg:flex">
