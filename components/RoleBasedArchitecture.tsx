@@ -23,7 +23,7 @@ export default function RoleBasedArchitecture() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-10 sm:mb-12 lg:mb-16">
-          <span className="inline-block mb-3 sm:mb-4 px-3 py-1 text-xs rounded-full bg-[#EEF2FF] text-[#4F46E5] font-medium">
+          <span className="inline-block mb-3 sm:mb-4 px-3 py-1 text-xs rounded-full bg-[#EEF2FF] text-black font-medium">
             Architecture
           </span>
 

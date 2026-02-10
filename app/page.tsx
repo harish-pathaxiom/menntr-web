@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import DashboardPreview from "@/components/DashboardPreview";
 import FragmentedSystems from "@/components/FragmentedSystems";
@@ -10,8 +13,11 @@ import Footer from "@/components/Footer";
 import InterviewReadiness from "@/components/InterviewReadiness";
 import PlacementVisibility from "@/components/PlacementVisibility";
 import InstitutionalCommunication from "@/components/InstitutionalCommunication";
+import RequestDemoModal from "@/components/RequestDemoModal";
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <main className="min-h-screen bg-gray-50 overflow-x-hidden">
       <Navbar />
@@ -96,8 +102,6 @@ export default function Home() {
           </svg>
         </div>
 
-
-
         {/* Hero Content */}
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="inline-block text-xs font-medium text-gray-600 bg-white border border-gray-200 rounded-full px-3 sm:px-4 py-1.5 mb-4 sm:mb-6">
@@ -122,7 +126,10 @@ export default function Home() {
           </p>
 
           <div className="flex justify-center gap-3 flex-wrap px-4">
-            <button className="bg-[linear-gradient(90deg,_#904BFF_0%,_#C053C2_100%)] hover:opacity-95 text-white font-medium px-5 sm:px-6 py-2.5 sm:py-3 rounded-full transition-all duration-200 shadow-sm hover:shadow-md">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="bg-[linear-gradient(90deg,_#904BFF_0%,_#C053C2_100%)] hover:opacity-95 text-white font-medium px-5 sm:px-6 py-2.5 sm:py-3 rounded-full transition-all duration-200 shadow-sm hover:shadow-md"
+            >
               Request Demo
             </button>
             <button className="border border-[#E1D3E8] text-[#6C5477] hover:bg-gray-50 font-medium px-6 sm:px-7 py-2.5 sm:py-3 rounded-full transition-all duration-500">
@@ -144,6 +151,12 @@ export default function Home() {
       <WhyMentrr />
       <CTASection />
       <Footer />
+
+      {/* Request Demo Modal */}
+      <RequestDemoModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </main>
   );
 }
