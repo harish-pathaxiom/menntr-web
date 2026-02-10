@@ -45,7 +45,7 @@ export default function InstitutionalCommunication() {
   ];
 
   return (
-    <section className="relative bg-gray-50 py-12 sm:py-16 lg:py-20 overflow-hidden">
+    <section className="relative bg-[radial-gradient(50%_50%_at_50%_50%,_#F7F8FA_0%,_#F7F8FA_100%)] py-12 sm:py-16 lg:py-20 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center">
           {/* LEFT — Dashboard SVGs */}

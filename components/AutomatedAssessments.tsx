@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function AutomatedAssessments() {
   return (
-    <section className="bg-gradient-to-br from-gray-50 to-purple-50/30 py-12 sm:py-16 lg:py-20">
+    <section className="bg-[linear-gradient(90deg,_#F2F4F9_0%,_#E8EEFF_100%)] py-12 sm:py-16 lg:py-24">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-8 items-center">
           {/* LEFT — Content */}

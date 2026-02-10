@@ -33,7 +33,7 @@ export default function WhyMentrr() {
   ];
 
   return (
-    <section className="bg-[#0a1628] text-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#0F1724] text-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10 sm:mb-12 lg:mb-16">
