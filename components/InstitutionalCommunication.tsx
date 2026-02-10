@@ -8,15 +8,23 @@ export default function InstitutionalCommunication() {
       icon: (
         <svg
           className="w-5 h-5 sm:w-6 sm:h-6"
-          fill="none"
-          stroke="currentColor"
           viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
+            d="M11 6.00001C14.0414 6.07835 17.0139 5.08751 19.4 3.20001C19.703 2.97274 20.1084 2.93619 20.4472 3.10558C20.786 3.27497 21 3.62123 21 4.00001V16C21 16.3788 20.786 16.725 20.4472 16.8944C20.1084 17.0638 19.703 17.0273 19.4 16.8C17.0139 14.9125 14.0414 13.9217 11 14H5C3.89617 14 3 13.1038 3 12V8.00001C3 6.89618 3.89617 6.00001 5 6.00001H11"
+            stroke="currentColor"
+            strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth={2}
-            d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"
+          />
+          <path
+            d="M6 14C6 16.5964 6.84213 19.1228 8.4 21.2C9.0623 22.0831 10.3169 22.2623 11.2 21.6C12.0831 20.9377 12.2623 19.6831 11.6 18.8C10.5614 17.4152 10 15.731 10 14M8 6V14"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       ),
@@ -27,15 +35,23 @@ export default function InstitutionalCommunication() {
       icon: (
         <svg
           className="w-5 h-5 sm:w-6 sm:h-6"
-          fill="none"
-          stroke="currentColor"
           viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
+            d="M16 20.9999V18.9999C16 16.7923 14.2077 14.9999 12 14.9999H6C3.79234 14.9999 2 16.7923 2 18.9999V20.9999M16 3.12793C17.7642 3.58529 18.9962 5.1774 18.9962 6.99993C18.9962 8.82246 17.7642 10.4146 16 10.8719M22 20.9999V18.9999C21.9986 17.177 20.765 15.5856 19 15.1299"
+            stroke="currentColor"
+            strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth={2}
-            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+          />
+          <path
+            d="M5 7C5 8.42906 5.7624 9.74957 7 10.4641C8.2376 11.1786 9.7624 11.1786 11 10.4641C12.2376 9.74957 13 8.42906 13 7C13 4.79234 11.2077 3 9 3C6.79234 3 5 4.79234 5 7H5"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       ),
@@ -103,10 +119,12 @@ export default function InstitutionalCommunication() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 mt-6 sm:mt-10">
               {features.map((feature, index) => (
-                <div key={index} className="space-y-3">
-                  <div className="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center text-gray-700 shadow-sm">
-                    {feature.icon}
-                  </div>
+                <div
+                  key={index}
+                  className="space-y-3 rounded-lg p-5 sm:p-6"
+                  style={{ background: "#F2F4F9" }}
+                >
+                  <div className="text-gray-900">{feature.icon}</div>
                   <div>
                     <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1.5">
                       {feature.title}

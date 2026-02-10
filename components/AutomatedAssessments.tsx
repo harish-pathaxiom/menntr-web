@@ -25,22 +25,29 @@ export default function AutomatedAssessments() {
 
             <div className="space-y-4 sm:space-y-5">
               {/* Flexible Creation */}
-              <div className="flex gap-3 sm:gap-4">
-                <div className="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center text-gray-700 shrink-0 shadow-sm">
+              <div className="flex gap-3">
+                <div className="flex-shrink-0">
                   <svg
-                    width="20"
-                    height="20"
+                    width="24"
+                    height="24"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path d="M12 19l7-7 3 3-7 7-3-3z" />
-                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
-                    <path d="M2 2l7.586 7.586" />
-                    <circle cx="11" cy="11" r="2" />
+                    <path
+                      d="M12.659 22H18C19.1038 22 20 21.1038 20 20V8.00001C20.0016 7.35995 19.7474 6.74578 19.294 6.29401L15.706 2.70601C15.2542 2.2526 14.6401 1.99844 14 2.00001H6C4.89617 2.00001 4 2.89618 4 4.00001V13.34"
+                      stroke="#0F1724"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M13.9991 2V7C13.9991 7.55192 14.4471 8 14.9991 8H19.9991M10.3771 12.622C11.2058 11.7941 12.5507 11.7948 13.3786 12.6235C14.2064 13.4522 14.2058 14.7971 13.3771 15.625L8.35906 20.637C8.12144 20.8748 7.82772 21.0488 7.50506 21.143L4.63806 21.98C4.46279 22.0311 4.2736 21.9826 4.14451 21.8536C4.01541 21.7245 3.96694 21.5353 4.01806 21.36L4.85406 18.491C4.94843 18.1687 5.12245 17.8753 5.36006 17.638L13.9991 2"
+                      stroke="#0F1724"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                 </div>
                 <div>
@@ -54,20 +61,36 @@ export default function AutomatedAssessments() {
               </div>
 
               {/* Rule-Based Evaluation */}
-              <div className="flex gap-3 sm:gap-4">
-                <div className="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center text-gray-700 shrink-0 shadow-sm">
+              <div className="flex gap-3">
+                <div className="flex-shrink-0">
                   <svg
-                    width="20"
-                    height="20"
+                    width="24"
+                    height="24"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <circle cx="12" cy="12" r="3" />
-                    <path d="M12 1v6m0 6v6m5.196-14.196l-4.243 4.243m0 5.656l-4.242 4.243m9.9-4.243l-4.243-4.242m0 5.656l-4.242-4.242" />
+                    <path
+                      d="M14 17H5M19 7H10"
+                      stroke="#0F1724"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M14 17C14 18.6557 15.3443 20 17 20C18.6557 20 20 18.6557 20 17C20 15.3443 18.6557 14 17 14C15.3443 14 14 15.3443 14 17V17"
+                      stroke="#0F1724"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M4 7C4 8.65575 5.34425 10 7 10C8.65575 10 10 8.65575 10 7C10 5.34425 8.65575 4 7 4C5.34425 4 4 5.34425 4 7V7"
+                      stroke="#0F1724"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                 </div>
                 <div>

@@ -6,15 +6,30 @@ export default function InterviewReadiness() {
       icon: (
         <svg
           className="w-5 h-5 sm:w-6 sm:h-6"
-          fill="none"
-          stroke="currentColor"
           viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
+            d="M12 8V4H8"
+            stroke="currentColor"
+            strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+          <path
+            d="M6 8H18C19.1038 8 20 8.89617 20 10V18C20 19.1038 19.1038 20 18 20H6C4.89617 20 4 19.1038 4 18V10C4 8.89617 4.89617 8 6 8V8"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M2 14H4M20 14H22M15 13V15M9 13V15"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       ),
@@ -26,15 +41,30 @@ export default function InterviewReadiness() {
       icon: (
         <svg
           className="w-5 h-5 sm:w-6 sm:h-6"
-          fill="none"
-          stroke="currentColor"
           viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
+            d="M2 12C2 17.5192 6.48085 22 12 22C17.5192 22 22 17.5192 22 12C22 6.48085 17.5192 2 12 2C6.48085 2 2 6.48085 2 12V12"
+            stroke="currentColor"
+            strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth={2}
-            d="M13 10V3L4 14h7v7l9-11h-7z"
+          />
+          <path
+            d="M6 12C6 15.3115 8.68851 18 12 18C15.3115 18 18 15.3115 18 12C18 8.68851 15.3115 6 12 6C8.68851 6 6 8.68851 6 12H6"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M10 12C10 13.1038 10.8962 14 12 14C13.1038 14 14 13.1038 14 12C14 10.8962 13.1038 10 12 10C10.8962 10 10 10.8962 10 12V12"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       ),
@@ -83,14 +113,17 @@ export default function InterviewReadiness() {
 
             <div className="space-y-5 sm:space-y-6">
               {features.map((feature, index) => (
-                <div key={index} className="flex gap-3 sm:gap-4 items-start">
-                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-white border border-gray-200 flex items-center justify-center text-gray-700 shadow-sm">
-                    {feature.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">
+                <div key={index} className="space-y-2">
+                  <div className="flex gap-2 sm:gap-3 items-center">
+                    <div className="flex-shrink-0 text-gray-900 w-5 sm:w-6">
+                      {feature.icon}
+                    </div>
+                    <h3 className="text-base sm:text-lg font-semibold text-gray-900">
                       {feature.title}
                     </h3>
+                  </div>
+                  <div className="flex gap-2 sm:gap-3">
+                    <div className="flex-shrink-0 w-5 sm:w-6"></div>
                     <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                       {feature.description}
                     </p>
