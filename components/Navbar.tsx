@@ -124,6 +124,12 @@ export default function Navbar() {
               >
                 RBAC
               </a>
+              <a
+                href="/about"
+                className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                About Us
+              </a>
             </div>
 
             {/* Desktop CTA Buttons */}
