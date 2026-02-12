@@ -140,7 +140,7 @@ export default function Home() {
       </section>
 
       {/* Dashboard Preview */}
-      <DashboardPreview />
+      {/* <DashboardPreview />
       <FragmentedSystems />
       <ValueProposition />
       <RoleBasedArchitecture />
@@ -149,6 +149,30 @@ export default function Home() {
       <PlacementVisibility />
       <InstitutionalCommunication />
       <WhyMentrr />
+      <CTASection />
+      <Footer /> */}
+
+      <DashboardPreview />
+
+      <section id="features">
+        <FragmentedSystems />
+      </section>
+
+      <ValueProposition />
+
+      <section id="rbac">
+        <RoleBasedArchitecture />
+      </section>
+
+      <AutomatedAssessments />
+      <InterviewReadiness />
+      <PlacementVisibility />
+      <InstitutionalCommunication />
+
+      <section id="why">
+        <WhyMentrr />
+      </section>
+
       <CTASection />
       <Footer />
 
