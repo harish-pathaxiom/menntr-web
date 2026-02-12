@@ -107,19 +107,19 @@ export default function Navbar() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-6">
               <a
-                href="#features"
+                href="/#features"
                 className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
               >
                 Features
               </a>
               <a
-                href="#why"
+                href="/#why"
                 className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
               >
                 Why Menntr?
               </a>
               <a
-                href="#rbac"
+                href="/#rbac"
                 className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
               >
                 RBAC
@@ -164,25 +164,31 @@ export default function Navbar() {
             <div className="md:hidden py-4 border-t border-gray-200">
               <div className="flex flex-col space-y-4">
                 <a
-                  href="#features"
+                  href="/#features"
                   className="text-sm text-gray-600 hover:text-gray-900 py-2 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Features
                 </a>
                 <a
-                  href="#why"
+                  href="/#why"
                   className="text-sm text-gray-600 hover:text-gray-900 py-2 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Why Menntr?
                 </a>
                 <a
-                  href="#rbac"
+                  href="/#rbac"
                   className="text-sm text-gray-600 hover:text-gray-900 py-2 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   RBAC
+                </a>
+                <a
+                  href="/about"
+                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  About Us
                 </a>
                 <div className="flex flex-col gap-3 pt-4 border-t border-gray-200">
                   <button className="text-sm text-black bg-[#F2F4F9] px-5 py-2.5 rounded-full text-center hover:bg-[#E8ECF6] transition-all duration-200">
