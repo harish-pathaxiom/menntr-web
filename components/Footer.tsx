@@ -34,7 +34,7 @@ export default function Footer() {
 const [isOpen, setIsOpen] = useState(false);
 const [pdfUrl, setPdfUrl] = useState("");
 const openPdf = (file: string) => {
-  setPdfUrl(`http://localhost:5000/api/pdf/${file}`);
+  setPdfUrl(`https://menntr-web-backend.onrender.com/api/pdf/${file}`);
   setIsOpen(true);
 };
 

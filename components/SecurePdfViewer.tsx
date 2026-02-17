@@ -23,21 +23,33 @@ export default function SecurePdfViewer({ pdfUrl, onClose }: Props) {
 
       for (let i = 1; i <= pdf.numPages; i++) {
         const page = await pdf.getPage(i);
-        const viewport = page.getViewport({ scale: 1.4 });
+
+        // 👇 Get base viewport
+        const viewport = page.getViewport({ scale: 1 });
+
+        // 👇 Calculate responsive scale
+        const containerWidth = container.clientWidth - 32; // padding adjust
+
+        const scale = containerWidth / viewport.width;
+
+        const scaledViewport = page.getViewport({ scale });
 
         const canvas = document.createElement("canvas");
         const context = canvas.getContext("2d")!;
 
-        canvas.width = viewport.width;
-        canvas.height = viewport.height;
+        canvas.width = scaledViewport.width;
+        canvas.height = scaledViewport.height;
 
-        canvas.className = "mx-auto rounded-lg shadow-md bg-white"; // centered
+        canvas.style.width = "100%";
+        canvas.style.height = "auto";
+
+        canvas.className = "mx-auto rounded-lg shadow-md bg-white";
 
         container.appendChild(canvas);
 
         await page.render({
           canvasContext: context,
-          viewport,
+          viewport: scaledViewport,
         }).promise;
       }
     };
@@ -50,26 +62,25 @@ export default function SecurePdfViewer({ pdfUrl, onClose }: Props) {
       className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center"
       onContextMenu={(e) => e.preventDefault()}
     >
-      {/* Modal Container */}
-      <div className="relative bg-[#F9FAFB] w-[95%] max-w-5xl h-[90vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+      <div className="relative bg-[#F9FAFB] w-[95%] sm:w-[90%] max-w-5xl h-[95vh] sm:h-[90vh] rounded-xl sm:rounded-2xl shadow-2xl flex flex-col overflow-hidden">
         {/* Sticky Header */}
-        <div className="sticky top-0 z-20 bg-white border-b border-gray-200 px-6 py-4 flex justify-between items-center">
-          <h3 className="text-lg font-semibold text-gray-800">
+        <div className="sticky top-0 z-20 bg-white border-b border-gray-200 px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
+          <h3 className="text-sm sm:text-lg font-semibold text-gray-800">
             Document Viewer
           </h3>
 
           <button
             onClick={onClose}
-            className="text-gray-500 hover:text-black text-xl font-semibold"
+            className="text-gray-500 hover:text-black text-lg sm:text-xl font-semibold"
           >
             ✕
           </button>
         </div>
 
-        {/* Scrollable PDF Area */}
+        {/* Scrollable PDF Content */}
         <div
           ref={containerRef}
-          className="flex-1 overflow-y-auto px-6 py-8 space-y-8 select-none"
+          className="flex-1 overflow-y-auto px-4 sm:px-6 py-6 sm:py-8 space-y-6 select-none"
         />
       </div>
     </div>
