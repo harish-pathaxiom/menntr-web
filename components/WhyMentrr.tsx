@@ -33,7 +33,7 @@ export default function WhyMentrr() {
   ];
 
   return (
-    <section className="bg-[#0F1724] text-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+    <section className="bg-gradient-to-b sm:bg-gradient-to-r from-[#0F1724] to-[#39588A] text-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10 sm:mb-12 lg:mb-16">
@@ -50,7 +50,7 @@ export default function WhyMentrr() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-[#0f1d2f] border border-gray-800 rounded-lg sm:rounded-xl p-5 sm:p-6 hover:border-gray-700 hover:bg-[#12233a] transition-all duration-300"
+              className="bg-[#FFFFFF0D] border border-[#FFFFFF1A] rounded-lg sm:rounded-xl p-5 sm:p-6 hover:border-[#FFFFFF33] hover:bg-[#12233a] transition-all duration-300"
             >
               <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-white">
                 {feature.title}

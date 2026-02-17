@@ -1,4 +1,5 @@
 import "./globals.css";
+import SecurityBlocker from "@/components/SecurityBlocker";
 
 export const metadata = {
   title: "Menntr - Smarter Campus Management",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <SecurityBlocker />
+        {children}
+      </body>
     </html>
   );
 }
