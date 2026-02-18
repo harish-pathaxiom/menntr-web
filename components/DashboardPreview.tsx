@@ -1178,7 +1178,7 @@ function AcademicPerformanceCard({ animKey }: { animKey: number }) {
       <div className="flex items-start justify-between mb-2">
         <div className="flex items-start gap-2">
           <Image
-            src="/Avg_academic_performance.svg"
+            src="/Avg_Academic_Performance.svg"
             alt="Menntr"
             width={12}
             height={12}
