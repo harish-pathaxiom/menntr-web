@@ -750,7 +750,7 @@ function Sidebar({
 }) {
   return (
     <div
-      className={`relative bg-white/50 backdrop-blur-[100px] shadow-[0px_0px_8px_0px_#0F172A1F] rounded-2xl transition-all duration-300 flex-shrink-0 hidden lg:flex flex-col ${collapsed ? "w-[72px]" : "w-[260px]"}`}
+      className={`relative bg-white/50  shadow-[0px_0px_8px_0px_#0F172A1F] rounded-2xl transition-all duration-300 flex-shrink-0 hidden lg:flex flex-col ${collapsed ? "w-[72px]" : "w-[260px]"}`}
     >
       {/* ── Logo area with collapse button in top-right corner ── */}
       <div
@@ -909,7 +909,7 @@ function StatCard({
   const trendNumber = parseInt(trend.replace("%", ""));
 
   return (
-    <div className="bg-white/50 backdrop-blur-[100px] rounded-2xl p-6 shadow-[0px_0px_8px_0px_#0F172A1F]">
+    <div className="bg-white/50  rounded-2xl p-6 shadow-[0px_0px_8px_0px_#0F172A1F]">
       {/* MAIN FLEX — LEFT CONTENT + RIGHT SPARKLINE */}
       <div className="flex items-start justify-between gap-6">
         {/* LEFT SIDE */}
@@ -1174,7 +1174,7 @@ function AcademicDonut({
 ============================================================ */
 function AcademicPerformanceCard({ animKey }: { animKey: number }) {
   return (
-    <div className="bg-white/50 backdrop-blur-[100px] rounded-2xl p-6 shadow-[0px_0px_8px_0px_#0F172A1F]">
+    <div className="bg-white/50 rounded-2xl p-6 shadow-[0px_0px_8px_0px_#0F172A1F]">
       <div className="flex items-start justify-between mb-2">
         <div className="flex items-start gap-2">
           <Image
@@ -1241,7 +1241,7 @@ function AcademicPerformanceCard({ animKey }: { animKey: number }) {
 ============================================================ */
 function PlacementReadinessCard({ animKey }: { animKey: number }) {
   return (
-    <div className="bg-white/50 backdrop-blur-[100px] rounded-2xl p-6 shadow-[0px_0px_8px_0px_#0F172A1F]">
+    <div className="bg-white/50 rounded-2xl p-6 shadow-[0px_0px_8px_0px_#0F172A1F]">
       <div className="flex items-center gap-2 text-[15px] font-semibold text-[#1A2C50] mb-6">
         <Image
           src="/Placement.svg"
@@ -1303,7 +1303,7 @@ function PlacementReadinessCard({ animKey }: { animKey: number }) {
 function BottomSections() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-      <div className="bg-white/50 backdrop-blur-[100px] rounded-2xl p-5 shadow-[0px_0px_8px_0px_#0F172A1F]">
+      <div className="bg-white/50 rounded-2xl p-5 shadow-[0px_0px_8px_0px_#0F172A1F]">
         <div className="flex items-center gap-2 text-[15px] font-semibold text-[#1A2C50]">
           <Image
             src="/Academic_performance_by_department.svg"
@@ -1316,7 +1316,7 @@ function BottomSections() {
           Academic Performance by department
         </div>
       </div>
-      <div className="bg-white/50 backdrop-blur-[100px] rounded-2xl p-5 shadow-[0px_0px_8px_0px_#0F172A1F]">
+      <div className="bg-white/50 rounded-2xl p-5 shadow-[0px_0px_8px_0px_#0F172A1F]">
         <div className="flex items-center gap-2 text-[15px] font-semibold text-[#1A2C50]">
           <Image
             src="/Minimum_Score.svg"
