@@ -31,16 +31,12 @@ export default function Footer() {
   // const [isPdfOpen, setIsPdfOpen] = useState(false);
   // const [pdfUrl, setPdfUrl] = useState("");
   // const [pdfTitle, setPdfTitle] = useState("");
-const [isOpen, setIsOpen] = useState(false);
-const [pdfUrl, setPdfUrl] = useState("");
-const openPdf = (file: string) => {
-  setPdfUrl(`https://menntr-web-backend.onrender.com/api/pdf/${file}`);
-  setIsOpen(true);
-};
-
-
-
-
+  const [isOpen, setIsOpen] = useState(false);
+  const [pdfUrl, setPdfUrl] = useState("");
+  const openPdf = (file: string) => {
+    setPdfUrl(`http://20.198.19.233/api/pdf/${file}`);
+    setIsOpen(true);
+  };
 
   return (
     <>
