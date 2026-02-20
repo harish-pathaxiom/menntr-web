@@ -34,7 +34,7 @@ export default function Footer() {
   const [isOpen, setIsOpen] = useState(false);
   const [pdfUrl, setPdfUrl] = useState("");
   const openPdf = (file: string) => {
-    setPdfUrl(`http://20.198.19.233:3000/api/pdf/${file}`);
+    setPdfUrl(`${process.env.NEXT_PUBLIC_API_URL}/api/pdf/${file}`);
     setIsOpen(true);
   };
 
