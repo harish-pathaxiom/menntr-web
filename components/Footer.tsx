@@ -23,8 +23,11 @@ export default function Footer() {
   ];
 
   const connectLinks = [
-    { name: "LinkedIn", href: "https://linkedin.com" },
-    { name: "Email Support", href: "mailto:support@mentrr.com" },
+    {
+      name: "LinkedIn",
+      href: "https://www.bing.com/ck/a?!&&p=abf98cca2b7ac44bdc684706a5d15db9ca2a08c0c12929e9c8c6548a452ea0aaJmltdHM9MTc3MTgwNDgwMA&ptn=3&ver=2&hsh=4&fclid=09b25d51-4218-6248-140b-4b9d437a63c1&psq=pathaxiom+company&u=a1aHR0cHM6Ly9pbi5saW5rZWRpbi5jb20vY29tcGFueS9wYXRoYXhpb20",
+    },
+    { name: "Email Support", href: "mailto:info@pathaxiom.com" },
   ];
 
   // ✅ PDF Modal State
