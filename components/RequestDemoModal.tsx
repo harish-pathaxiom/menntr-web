@@ -131,7 +131,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               </svg>
             </div>
 
-            <h3 className="text-xl font-semibold text-gray-900 mb-2 animate-fadeIn">
+            <h3 className="text-xl font-semibold text-center text-gray-900 mb-2 animate-fadeIn">
               Request Submitted Successfully 🎉
             </h3>
 
