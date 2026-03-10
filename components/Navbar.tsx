@@ -134,7 +134,9 @@ export default function Navbar() {
 
             {/* Desktop CTA Buttons */}
             <div className="hidden md:flex items-center gap-3">
-              <button className="text-sm text-gray-700 bg-[#F2F4F9] px-5 py-2 rounded-full hover:bg-[#E8ECF6] transition-all duration-200">
+              <button
+                 onClick={() => window.location.href = "https://app.menntr.in"} 
+                className="text-sm text-gray-700 bg-[#F2F4F9] px-5 py-2 rounded-full hover:bg-[#E8ECF6] transition-all duration-200">
                 Log in
               </button>
               <button
