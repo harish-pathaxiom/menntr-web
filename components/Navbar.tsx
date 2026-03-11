@@ -14,6 +14,11 @@ export default function Navbar() {
     setIsMenuOpen(false); // Close mobile menu if open
   };
 
+  const handleLogin = () => {
+    setIsMenuOpen(false); // Close mobile menu if open
+    window.location.href = "https://app.menntr.in";
+  };
+
   return (
     <>
       <nav className="bg-white border-b border-gray-200 sticky top-0 z-50 relative overflow-hidden">
@@ -135,8 +140,9 @@ export default function Navbar() {
             {/* Desktop CTA Buttons */}
             <div className="hidden md:flex items-center gap-3">
               <button
-                onClick={() => window.location.href = "https://app.menntr.in"} 
-                className="text-sm text-gray-700 bg-[#F2F4F9] px-5 py-2 rounded-full hover:bg-[#E8ECF6] transition-all duration-200">
+                onClick={handleLogin}
+                className="text-sm text-gray-700 bg-[#F2F4F9] px-5 py-2 rounded-full hover:bg-[#E8ECF6] transition-all duration-200"
+              >
                 Log in
               </button>
               <button
@@ -189,11 +195,15 @@ export default function Navbar() {
                 <a
                   href="/about"
                   className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   About Us
                 </a>
                 <div className="flex flex-col gap-3 pt-4 border-t border-gray-200">
-                  <button className="text-sm text-black bg-[#F2F4F9] px-5 py-2.5 rounded-full text-center hover:bg-[#E8ECF6] transition-all duration-200">
+                  <button
+                    onClick={handleLogin}
+                    className="text-sm text-black bg-[#F2F4F9] px-5 py-2.5 rounded-full text-center hover:bg-[#E8ECF6] transition-all duration-200"
+                  >
                     Log in
                   </button>
                   <button
