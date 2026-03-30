@@ -11,16 +11,79 @@ export default function Navbar() {
 
   const handleRequestDemo = () => {
     setIsModalOpen(true);
-    setIsMenuOpen(false); // Close mobile menu if open
+    setIsMenuOpen(false);
   };
 
   const handleLogin = () => {
-    setIsMenuOpen(false); // Close mobile menu if open
+    setIsMenuOpen(false);
     window.location.href = "https://app.menntr.in";
   };
 
   return (
     <>
+      <style>{`
+        @keyframes ai-border-spin {
+          0%   { transform: translate(-50%, -50%) rotate(0deg); }
+          100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .ai-login-btn {
+          position: relative;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border: none;
+          background: none;
+          padding: 2px;
+          cursor: pointer;
+          border-radius: 9999px;
+          overflow: hidden;
+        }
+
+        .ai-login-btn-bg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 1000px;
+          height: 1000px;
+          background: conic-gradient(
+            from 0deg,
+            transparent 0deg,
+            transparent 60deg,
+            #904BFF 90deg,
+            #C053C2 150deg,
+            #FF6EE7 210deg,
+            #7B2FFF 270deg,
+            transparent 300deg,
+            transparent 360deg
+          );
+          animation: ai-border-spin 2s linear infinite;
+          pointer-events: none;
+        }
+
+        .ai-login-btn-mask {
+          position: absolute;
+          inset: 2px;
+          border-radius: 9999px;
+          background: #F2F4F9;
+          transition: background 0.2s;
+          z-index: 1;
+        }
+
+        .ai-login-btn:hover .ai-login-btn-mask {
+          background: #E8ECF6;
+        }
+
+        .ai-login-btn-text {
+          position: relative;
+          z-index: 2;
+          font-size: 0.875rem;
+          color: #374151;
+          padding: 6px 20px;
+          white-space: nowrap;
+        }
+      `}</style>
+
       <nav className="bg-white border-b border-gray-200 sticky top-0 z-50 relative overflow-hidden">
         {/* Decorative Border Circles - Top Right */}
         <div className="absolute -top-24 right-5 pointer-events-none hidden lg:block">
@@ -139,12 +202,12 @@ export default function Navbar() {
 
             {/* Desktop CTA Buttons */}
             <div className="hidden md:flex items-center gap-3">
-              <button
-                onClick={handleLogin}
-                className="text-sm text-gray-700 bg-[#F2F4F9] px-5 py-2 rounded-full hover:bg-[#E8ECF6] transition-all duration-200"
-              >
-                Log in
+              <button onClick={handleLogin} className="ai-login-btn">
+                <div className="ai-login-btn-bg" />
+                <div className="ai-login-btn-mask" />
+                <span className="ai-login-btn-text">Log in</span>
               </button>
+
               <button
                 onClick={handleRequestDemo}
                 className="text-white text-sm px-5 py-2 rounded-full transition-all duration-200 shadow-sm bg-gradient-to-r from-[#904BFF] to-[#C053C2] hover:opacity-90"
@@ -202,10 +265,19 @@ export default function Navbar() {
                 <div className="flex flex-col gap-3 pt-4 border-t border-gray-200">
                   <button
                     onClick={handleLogin}
-                    className="text-sm text-black bg-[#F2F4F9] px-5 py-2.5 rounded-full text-center hover:bg-[#E8ECF6] transition-all duration-200"
+                    className="ai-login-btn"
+                    style={{ width: "100%" }}
                   >
-                    Log in
+                    <div className="ai-login-btn-bg" />
+                    <div className="ai-login-btn-mask" />
+                    <span
+                      className="ai-login-btn-text"
+                      style={{ width: "100%", textAlign: "center" }}
+                    >
+                      Log in
+                    </span>
                   </button>
+
                   <button
                     onClick={handleRequestDemo}
                     className="text-white text-sm px-5 py-2.5 rounded-full transition-all duration-200 shadow-sm bg-gradient-to-r from-[#904BFF] to-[#C053C2] hover:opacity-90"
