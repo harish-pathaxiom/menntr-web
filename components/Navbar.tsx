@@ -57,7 +57,7 @@ export default function Navbar() {
             transparent 300deg,
             transparent 360deg
           );
-          animation: ai-border-spin 2s linear infinite;
+          animation: ai-border-spin 4s linear infinite;
           pointer-events: none;
         }
 
@@ -265,17 +265,15 @@ export default function Navbar() {
                 <div className="flex flex-col gap-3 pt-4 border-t border-gray-200">
                   <button
                     onClick={handleLogin}
-                    className="ai-login-btn"
-                    style={{ width: "100%" }}
+                    className="w-full text-sm text-gray-700 px-5 py-2.5 rounded-full transition-all duration-200"
+                    style={{
+                      background: "#F2F4F9",
+                      border: "2px solid #E2E8F0",
+                    }}
+                    onMouseEnter={e => (e.currentTarget.style.background = "#E8ECF6")}
+                    onMouseLeave={e => (e.currentTarget.style.background = "#F2F4F9")}
                   >
-                    <div className="ai-login-btn-bg" />
-                    <div className="ai-login-btn-mask" />
-                    <span
-                      className="ai-login-btn-text"
-                      style={{ width: "100%", textAlign: "center" }}
-                    >
-                      Log in
-                    </span>
+                    Log in
                   </button>
 
                   <button
